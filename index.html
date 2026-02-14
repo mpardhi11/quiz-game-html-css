@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quize Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 1st Div -->
+      <div class="scree active" id="start-screen">
+        <h1>Quize Time!</h1>
+        <p>
+          Test your knowledge with our fun quiz game. Click the button below to
+          start playing and see how much you know!
+        </p>
+        <button id="start-btn">Start Quiz</button>
+      </div>
+
+      <!-- 2nd Div -->
+      <div class="screen" id="quiz-screen">
+        <div class="quiz-header">
+          <h2 id="question-text">Question goes here</h2>
+          <div class="quiz-info">
+            <p>
+              Question <span id="current-question">1 </span> of <span>5</span>
+            </p>
+            <p>Score: <span id="score">0</span></p>
+          </div>
+        </div>
+
+        <div id="answer-container" class="answer-container">
+          <!--  Answer buttons will be generated here -->
+        </div>
+        <div class="progress-bar">
+          <div id="progress" class="progess"></div>
+        </div>
+      </div>
+
+      <!-- 3rd Div -->
+      <div id="result-screen" class="screen">
+        <h1>Quize resuy</h1>
+        <div class="result-info">
+          <p>
+            you scoed <span id="final-score">0</span> of
+            <span id="max-score">5</span>
+          </p>
+          <div id="result-message">Good Job</div>
+          <button id="restart-btn">Restart Quiz</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
