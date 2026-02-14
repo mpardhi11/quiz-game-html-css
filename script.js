@@ -82,13 +82,20 @@ function restartQuiz() {
 }
 
 function startQuiz() {
-  // reset vars
   console.log("Starting quiz...");
+
   currentQuestionIndex = 0;
   score = 0;
   scoreSpan.textContent = 0;
 
+  // 🔀 RANDOMIZE QUESTIONS
+  shuffleArray(quizQuestions);
+
+  // 🔀 RANDOMIZE ANSWERS FOR EACH QUESTION
+  quizQuestions.forEach((q) => shuffleArray(q.answers));
+
   startScreen.classList.remove("active");
+  resultScreen.classList.remove("active");
   quizScreen.classList.add("active");
 
   showQuestion();
@@ -176,5 +183,12 @@ function showResults() {
     resultMessage.textContent = "Not bad! Try again to improve!";
   } else {
     resultMessage.textContent = "Keep studying! You'll get better!";
+  }
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
