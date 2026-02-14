@@ -2,6 +2,33 @@
 
 /* This CSS code is a basic reset that removes default margin and padding from all elements 
 set by browsers, and sets the box-sizing property to border-box. This ensures that the width and height of elements include padding and borders, making it easier to manage layout and spacing in your CSS. */
+:root {
+  /* Primary brand */
+  --primary: #e86a33;
+  --primary-hover: #d35400;
+
+  /* Backgrounds */
+  --bg-body: #f5efe6;
+  --bg-card: #ffffff;
+  --bg-muted: #f8f0e5;
+  --bg-progress: #e0e0e0;
+
+  /* Text */
+  --text-main: #333333;
+  --text-muted: #666666;
+  --text-light: #ffffff;
+
+  /* Feedback */
+  --success: #4caf50;
+  --danger: #f44336;
+
+  /* Borders */
+  --border-soft: #eadbc8;
+}
+/*  Basic Reset  */
+
+/* This CSS code is a basic reset that removes default margin and padding from all elements 
+set by browsers, and sets the box-sizing property to border-box. This ensures that the width and height of elements include padding and borders, making it easier to manage layout and spacing in your CSS. */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +38,7 @@ set by browsers, and sets the box-sizing property to border-box. This ensures th
 }
 
 body {
-  background: #f5efe6;
+  background: var(--bg-body);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,11 +48,11 @@ body {
 }
 
 .container {
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 600px;
+  max-width: 37.5rem;
   overflow: hidden;
 }
 
@@ -42,32 +69,33 @@ body {
 
 /* START SCREEN */
 #start-screen h1 {
-  color: #e86a33;
+  color: var(--primary);
   font-size: 2.5rem;
   margin-bottom: 1.25rem; /* 20px = 1.25rem */
 }
 
 #start-screen p {
-  color: #333;
+  color: var(--text-main);
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .quiz-header {
   margin-bottom: 2rem;
 }
+
 #question-text {
-  color: #e20808;
+  color: var(--primary);
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 1.4rem;
+  line-height: 1.4;
 }
 
 .quiz-info {
   display: flex;
   justify-content: space-between; /*  space-between: 1st item is at the start, last item is at the end, */
   margin-bottom: 0.625rem; /* 10px = 0.625rem */
-  color: #666; /* red*/
+  color: var(--text-muted);
 }
 
 .answer-container {
@@ -78,43 +106,43 @@ body {
 }
 
 .answer-btn {
-  background-color: #f8f0e5; /* red*/
-  color: #333; /*text color*/
-  border: 2px solid #eadbc8;
-  padding: 10px;
+  background-color: var(--bg-muted);
+  color: var(--text-main);
+  border: 0.125rem solid var(--border-soft);
+  padding: 0.625rem;
   cursor: pointer;
   text-align: left;
   transition: all 0.3s ease;
 }
 
 .answer-btn:hover {
-  background-color: #e86a33;
-  color: #fff;
-  border-color: #e86a33;
+  background-color: var(--primary);
+  color: var(--text-light);
+  border-color: var(--primary);
 }
 
 .answer-btn.correct {
-  background-color: #4caf50;
-  color: #fff;
-  border-color: #4caf50;
+  background-color: var(--success);
+  color: var(--text-light);
+  border-color: var(--success);
 }
 
 .answer-btn.incorrect {
-  background-color: #f44336;
-  color: #fff;
-  border-color: #f44336;
+  background-color: var(--danger);
+  color: var(--text-light);
+  border-color: var(--danger);
 }
 
 .progress-bar {
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  height: 10px;
-  margin-top: 20px;
+  background-color: var(--bg-progress);
+  border-radius: 0.313rem;
+  height: 0.625rem;
+  margin-top: 1.25rem;
   overflow: hidden;
 }
 
 #progress {
-  background-color: #4caf50;
+  background-color: var(--success);
   height: 100%;
   transition: width 0.3s ease;
   width: 0%;
@@ -122,51 +150,51 @@ body {
 
 /*  RESULT SCREEN */
 #result-screen h1 {
-  /* font-size: 2.5rem; */
-  color: #e86a33;
-  margin-bottom: 30px;
+  color: var(--primary);
+  margin-bottom: 1.875rem;
 }
 
 .result-info {
-  background-color: #f8f0e5;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  padding: 20px;
+  background-color: var(--bg-muted);
+  border-radius: 0.625rem;
+  margin-bottom: 1.875rem;
+  padding: 1.25rem;
 }
 
 .result-info p {
-  color: #333;
+  color: var(--text-main);
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 #result-message {
-  color: #e86a33;
+  color: var(--primary);
   font-size: 1.5rem;
   font-weight: bold;
 }
 
 button {
-  background-color: #e86a33;
-  border-radius: 10px;
+  background-color: var(--primary);
+  border-radius: 0.625rem;
   border: none;
-  color: #fff;
+  color: var(--text-light);
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #d35400;
+  background-color: var(--primary-hover);
 }
 
 /* MEDIA QUERIES */
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
   /* When the screen width is 500px or less, the following styles will be applied */
 
   .screen {
     padding: 1rem; /* Reduce padding for smaller screens */
   }
+
   #start-screen h1 {
     font-size: 2rem; /* Reduce font size for smaller screens */
   }
@@ -176,7 +204,7 @@ button:hover {
   }
 
   button {
-    padding: 8px 16px; /* Reduce button padding for smaller screens */
+    padding: 0.5rem 1rem; /* Reduce button padding for smaller screens */
     font-size: 1rem; /* Reduce button font size for smaller screens */
   }
 }
