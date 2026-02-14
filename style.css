@@ -81,7 +81,7 @@ body {
   background-color: #f8f0e5; /* red*/
   color: #333; /*text color*/
   border: 2px solid #eadbc8;
-  padding: 1px;
+  padding: 10px;
   cursor: pointer;
   text-align: left;
   transition: all 0.3s ease;
