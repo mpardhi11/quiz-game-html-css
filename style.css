@@ -47,6 +47,12 @@ body {
   margin-bottom: 1.25rem; /* 20px = 1.25rem */
 }
 
+#start-screen p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
 .quiz-header {
   margin-bottom: 2rem;
 }
@@ -104,4 +110,72 @@ body {
   border-radius: 5px;
   height: 10px;
   overflow: hidden;
+}
+
+.progess {
+  background-color: #4caf50;
+  height: 100%;
+  transition: width 0.3s ease;
+  width: 0%;
+}
+
+/*  RESULT SCREEN */
+#result-screen h1 {
+  /* font-size: 2.5rem; */
+  color: #e86a33;
+  margin-bottom: 30px;
+}
+
+.result-info {
+  background-color: #f8f0e5;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.result-info p {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+#result-message {
+  color: #e86a33;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: #e86a33;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d35400;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+  /* When the screen width is 500px or less, the following styles will be applied */
+
+  .screen {
+    padding: 1rem; /* Reduce padding for smaller screens */
+  }
+  #start-screen h1 {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+
+  #question-text {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  button {
+    padding: 8px 16px; /* Reduce button padding for smaller screens */
+    font-size: 1rem; /* Reduce button font size for smaller screens */
+  }
 }
