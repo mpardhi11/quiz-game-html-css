@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quize Game</title>
+    <title>Quiz Game</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -11,7 +11,7 @@
     <div class="container">
       <!-- 1st Div -->
       <div class="screen active" id="start-screen">
-        <h1>Quize Time!</h1>
+        <h1>Quiz Time!</h1>
         <p>
           Test your knowledge with our fun quiz game. Click the button below to
           start playing and see how much you know!
@@ -34,26 +34,24 @@
 
         <div id="answer-container" class="answer-container">
           <!--  Answer buttons will be generated here -->
-          <button class="answer-btn">1</button>
-          <button class="answer-btn">1</button>
-          <button class="answer-btn">1</button>
         </div>
         <div class="progress-bar">
-          <div id="progress" class="progess"></div>
+          <div id="progress" class="progress"></div>
         </div>
       </div>
 
       <!-- 3rd Div -->
       <div class="screen" id="result-screen">
-        <h1>Quize resuy</h1>
+        <h1>Quiz Results</h1>
         <div class="result-info">
           <p>
-            you scoed <span id="final-score">0</span> of
+            You scored <span id="final-score">0</span> out of
             <span id="max-score">5</span>
           </p>
+
           <div id="result-message">Good Job</div>
-          <button id="restart-btn">Restart Quiz</button>
         </div>
+        <button id="restart-btn">Restart Quiz</button>
       </div>
     </div>
   </body>
